@@ -5,7 +5,7 @@ CREATE TABLE `tiktok_user`
 (
     `id`          bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
     `username`    varchar(20)        NOT NULL DEFAULT '' COMMENT '账号',
-    `password`    varchar(64)        NOT NULL DEFAULT '' COMMENT '密码',
+    `password`    varchar(64)        NOT NULL DEFAULT '' COMMENT '密码',  
     PRIMARY KEY (`id`),
     UNIQUE INDEX username (`username`) USING BTREE 
 ) ENGINE = InnoDB
@@ -60,11 +60,3 @@ CREATE TABLE `tiktok_video_comment`
     INDEX video_id (`video_id`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4 COMMENT ='评论表';
-
-
-
-             /*
-    `follow_count`       bigint(20) unsigned        NOT NULL DEFAULT 0 COMMENT '关注',
-    `FollowerCount`       bigint(20) unsigned        NOT NULL DEFAULT 0 COMMENT '粉丝',
-    `IsFollow`      tinyint(1)              NOT NULL DEFAULT 0 COMMENT '是否关注',
-    */

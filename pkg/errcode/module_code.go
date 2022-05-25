@@ -6,5 +6,5 @@ var (
 	ErrorDeleteCommentFail  = NewError(20010003, "删除评论失败")
 	ErrorCountCommentFail   = NewError(20010004, "统计评论失败")
 
-	ErrorUploadFileFail = NewError(20030001, "上传文件失败")
+	ErrorUploadFileFail = NewError(20020001, "上传文件失败")
 )

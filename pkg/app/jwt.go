@@ -1,4 +1,4 @@
-package jwt
+package app
 
 import (
 	"github.com/FlyInThesky10/TikTok-Fly/global"
@@ -9,12 +9,14 @@ import (
 
 type Claims struct {
 	UserName string `json:"username"`
+	Password string `json:"password"`
 	jwt.StandardClaims
 }
 
-func GenerateJWTToken(username string) (string, int64, error) {
+func GenerateJWTToken(username, password string) (string, int64, error) {
 	claims := &Claims{
 		username,
+		password,
 		jwt.StandardClaims{
 			ExpiresAt: time.Now().Add(global.JWTSetting.Expire).Unix(),
 		},

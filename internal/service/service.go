@@ -1,3 +1,4 @@
+// Package service 服务层，调用 dao 的方法及用 model 中的结构
 package service
 
 import (
