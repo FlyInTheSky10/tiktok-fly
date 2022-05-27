@@ -18,8 +18,8 @@ func NewRouter() *gin.Engine {
 	apiRouter := r.Group("/douyin")
 	{
 		// basic apis
-		/*apiRouter.GET("/feed/", v1.Feed)
-		apiRouter.GET("/user/", v1.UserInfo)*/
+		/*apiRouter.GET("/feed/", v1.Feed)*/
+		apiRouter.GET("/user/", controller.UserInfo)
 		apiRouter.POST("/user/register/", controller.UserRegister)
 		apiRouter.POST("/user/login/", controller.UserLogin)
 		/*apiRouter.POST("/publish/action/", v1.Publish)

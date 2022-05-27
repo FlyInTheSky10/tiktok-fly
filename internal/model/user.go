@@ -5,3 +5,8 @@ type TiktokUser struct {
 	Username string
 	Password string
 }
+type TiktokRelation struct {
+	ID         uint `gorm:"primary_key"`
+	UserId     uint
+	FollowerId uint
+}
